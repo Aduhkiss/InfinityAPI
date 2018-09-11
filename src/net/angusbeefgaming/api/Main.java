@@ -25,6 +25,7 @@ public class Main extends JavaPlugin {
 	    getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new ServerManager());
 	    
 	    // Start the API
+	    API.startApi(this);
 	}
 	
 	public static Main getInstance() {
