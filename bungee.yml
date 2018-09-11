@@ -1,0 +1,5 @@
+name: InfinityAPI
+main: net.angusbeefgaming.api.MainBungee
+version: 1.0
+description: Infinity Network Core API
+author: Atticus Zambrana

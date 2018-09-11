@@ -1,0 +1,4 @@
+name: InfinityAPI
+main: net.angusbeefgaming.api.Main
+version: 1.0
+author: ["Atticus Zambrana"]
