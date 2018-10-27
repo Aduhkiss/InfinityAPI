@@ -4,7 +4,7 @@ import net.angusbeefgaming.api.bungee.NetworkManager;
 import net.angusbeefgaming.api.bungee.PlayerManager;
 import net.angusbeefgaming.api.bungee.ServerManager;
 
-public class API {
+public class BungeeAPI {
 	public static NetworkManager networkManager;
 	public static PlayerManager playerManager;
 	public static ServerManager serverManager;
