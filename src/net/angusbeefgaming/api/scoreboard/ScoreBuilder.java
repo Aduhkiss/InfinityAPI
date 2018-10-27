@@ -13,30 +13,30 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
-public class ScoreHelper {
+public class ScoreBuilder {
 
-    private static HashMap<UUID, ScoreHelper> players = new HashMap<>();
+    private static HashMap<UUID, ScoreBuilder> players = new HashMap<>();
    
     public static boolean hasScore(Player player) {
         return players.containsKey(player.getUniqueId());
     }
    
-    public static ScoreHelper createScore(Player player) {
-        return new ScoreHelper(player);
+    public static ScoreBuilder createScore(Player player) {
+        return new ScoreBuilder(player);
     }
    
-    public static ScoreHelper getByPlayer(Player player) {
+    public static ScoreBuilder getByPlayer(Player player) {
         return players.get(player.getUniqueId());
     }
 
-    public static ScoreHelper removeScore(Player player) {
+    public static ScoreBuilder removeScore(Player player) {
         return players.remove(player.getUniqueId());
     }
    
     private Scoreboard scoreboard;
     private Objective sidebar;
 
-    private ScoreHelper(Player player) {
+    private ScoreBuilder(Player player) {
         scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
         sidebar = scoreboard.registerNewObjective("sidebar", "dummy");
         sidebar.setDisplaySlot(DisplaySlot.SIDEBAR);
